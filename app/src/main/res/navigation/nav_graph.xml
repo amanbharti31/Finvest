@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_account"
+        android:name="com.finance.finvest.fragments.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/nav_discover"
+        android:name="com.finance.finvest.fragments.DiscoverFragment"
+        android:label="fragment_discover"
+        tools:layout="@layout/fragment_discover" />
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.finance.finvest.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_account"
+            app:destination="@id/nav_account" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_discover"
+            app:destination="@id/nav_discover" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_invest"
+            app:destination="@id/nav_invest" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_invest"
+        android:name="com.finance.finvest.fragments.InvestFragment"
+        android:label="fragment_invest"
+        tools:layout="@layout/fragment_invest" />
+    <activity
+        android:id="@+id/transactionsActivity"
+        android:name="com.finance.finvest.activities.TransactionsActivity"
+        android:label="activity_transactions"
+        tools:layout="@layout/activity_transactions" />
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="com.finance.finvest.fragments.FilterFragment"
+        android:label="fragment_filter"
+        tools:layout="@layout/fragment_filter" />
+
+
+</navigation>

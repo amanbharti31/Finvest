@@ -1,0 +1,202 @@
+{
+  "credit_cards": [
+    {
+      "id": 1,
+      "bankName": "Wells Fargo",
+      "cardType": "Gold",
+      "balance": -3200.0,
+      "currency": "USD",
+      "transactions": [
+        {
+          "id": 1,
+          "merchant": "Uber",
+          "amount": -82.0,
+          "currency": "USD",
+          "date": "2023-11-15T16:25:00",
+          "status": "Pending",
+          "category": "Auto & Transport"
+        },
+        {
+          "id": 2,
+          "merchant": "Starbucks",
+          "amount": -110.0,
+          "currency": "USD",
+          "date": "2023-11-25T11:00:00",
+          "status": "Completed",
+          "category": "Food & Dining"
+        },
+        {
+          "id": 3,
+          "merchant": "Mc Donalds",
+          "amount": -90.0,
+          "currency": "USD",
+          "date": "2023-12-10T13:00:00",
+          "status": "Completed",
+          "category": "Food & Dining"
+        },
+        {
+          "id": 4,
+          "merchant": "Ikea",
+          "amount": -120.0,
+          "currency": "USD",
+          "date": "2024-01-05T10:45:00",
+          "status": "Completed",
+          "category": "Housing"
+        },
+        {
+          "id": 5,
+          "merchant": "JBL Technologies",
+          "amount": -150.0,
+          "currency": "USD",
+          "date": "2024-02-15T15:30:00",
+          "status": "Completed",
+          "category": "Entertainments"
+        },
+        {
+          "id": 6,
+          "merchant": "Mc Donalds",
+          "amount": -95.0,
+          "currency": "USD",
+          "date": "2024-03-10T14:00:00",
+          "status": "Completed",
+          "category": "Food & Dining"
+        },
+        {
+          "id": 7,
+          "merchant": "Starbucks",
+          "amount": -120.0,
+          "currency": "USD",
+          "date": "2024-05-18T12:00:00",
+          "status": "Pending",
+          "category": "Food & Dining"
+        },
+        {
+          "id": 8,
+          "merchant": "Uber",
+          "amount": -100.0,
+          "currency": "USD",
+          "date": "2024-06-25T17:45:00",
+          "status": "Completed",
+          "category": "Auto & Transport"
+        },
+        {
+          "id": 9,
+          "merchant": "Ikea",
+          "amount": -140.0,
+          "currency": "USD",
+          "date": "2024-08-14T10:30:00",
+          "status": "Completed",
+          "category": "Housing"
+        },
+        {
+          "id": 10,
+          "merchant": "JBL Technologies",
+          "amount": -200.0,
+          "currency": "USD",
+          "date": "2024-11-10T18:30:00",
+          "status": "Pending",
+          "category": "Entertainment"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "bankName": "Citi",
+      "cardType": "Platinum",
+      "balance": -2100.0,
+      "currency": "USD",
+      "transactions": [
+        {
+          "id": 11,
+          "merchant": "Uber",
+          "amount": -85.0,
+          "currency": "USD",
+          "date": "2023-11-20T16:00:00",
+          "status": "Pending",
+          "category": "Auto & Transport"
+        },
+        {
+          "id": 12,
+          "merchant": "Starbucks",
+          "amount": -115.0,
+          "currency": "USD",
+          "date": "2024-01-05T11:00:00",
+          "status": "Completed",
+          "category": "Food & Dining"
+        },
+        {
+          "id": 13,
+          "merchant": "Mc Donalds",
+          "amount": -95.0,
+          "currency": "USD",
+          "date": "2024-02-18T13:00:00",
+          "status": "Completed",
+          "category": "Food & Dining"
+        },
+        {
+          "id": 14,
+          "merchant": "Ikea",
+          "amount": -130.0,
+          "currency": "USD",
+          "date": "2024-04-10T10:45:00",
+          "status": "Completed",
+          "category": "Housing"
+        },
+        {
+          "id": 15,
+          "merchant": "JBL Technologies",
+          "amount": -180.0,
+          "currency": "USD",
+          "date": "2024-06-15T15:30:00",
+          "status": "Completed",
+          "category": "Entertainment"
+        },
+        {
+          "id": 16,
+          "merchant": "Starbucks",
+          "amount": -120.0,
+          "currency": "USD",
+          "date": "2024-07-05T14:00:00",
+          "status": "Pending",
+          "category": "Food & Dining"
+        },
+        {
+          "id": 17,
+          "merchant": "Mc Donalds",
+          "amount": -110.0,
+          "currency": "USD",
+          "date": "2024-09-10T16:30:00",
+          "status": "Completed",
+          "category": "Food & Dining"
+        },
+        {
+          "id": 18,
+          "merchant": "Uber",
+          "amount": -120.0,
+          "currency": "USD",
+          "date": "2024-10-05T10:15:00",
+          "status": "Completed",
+          "category": "Auto & Transport"
+        },
+        {
+          "id": 19,
+          "merchant": "Ikea",
+          "amount": -150.0,
+          "currency": "USD",
+          "date": "2024-11-18T12:45:00",
+          "status": "Pending",
+          "category": "Housing"
+        },
+        {
+          "id": 20,
+          "merchant": "JBL Technologies",
+          "amount": -210.0,
+          "currency": "USD",
+          "date": "2024-11-23T18:15:00",
+          "status": "Completed",
+          "category": "Entertainment"
+        }
+      ]
+    }
+  ]
+}

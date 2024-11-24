@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_background"
+    android:fillViewport="true"
+    tools:context=".fragments.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:paddingBottom="56dp"
+        android:paddingTop="56dp"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_balance_due"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Balance Due"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_balance_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$0.00"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_balance_due" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/line_chart"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_balance_amount" />
+
+        <RadioGroup
+            android:id="@+id/filters_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line_chart">
+
+            <RadioButton
+                android:textColor="@color/radio_button_text_color"
+                android:gravity="center"
+                android:id="@+id/rb_1w"
+                android:background="@drawable/radiobuttonbackground"
+                android:button="@drawable/radiobuttonbackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1W" />
+
+            <RadioButton
+                android:textColor="@color/radio_button_text_color"
+                android:gravity="center"
+                android:id="@+id/rb_1m"
+                android:background="@drawable/radiobuttonbackground"
+                android:button="@drawable/radiobuttonbackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1M" />
+
+            <RadioButton
+                android:textColor="@color/radio_button_text_color"
+                android:gravity="center"
+                android:id="@+id/rb_3m"
+                android:background="@drawable/radiobuttonbackground"
+                android:button="@drawable/radiobuttonbackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3M" />
+
+            <RadioButton
+                android:id="@+id/rb_6m"
+                android:textColor="@color/radio_button_text_color"
+                android:gravity="center"
+                android:background="@drawable/radiobuttonbackground"
+                android:button="@drawable/radiobuttonbackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="6M" />
+
+            <RadioButton
+                android:gravity="center"
+                android:id="@+id/rb_ytd"
+                android:textColor="@color/radio_button_text_color"
+                android:background="@drawable/radiobuttonbackground"
+                android:button="@drawable/radiobuttonbackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="YTD" />
+
+            <RadioButton
+                android:textColor="@color/radio_button_text_color"
+                android:id="@+id/rb_1y"
+                android:gravity="center"
+                android:background="@drawable/radiobuttonbackground"
+                android:button="@drawable/radiobuttonbackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1Y" />
+
+            <RadioButton
+                android:textColor="@color/radio_button_text_color"
+                android:id="@+id/rb_all"
+                android:gravity="center"
+                android:background="@drawable/radiobuttonbackground"
+                android:button="@drawable/radiobuttonbackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ALL" />
+        </RadioGroup>
+
+        <TextView
+            android:background="@drawable/round_background"
+            android:id="@+id/tv_credit_cards_title"
+            android:layout_width="match_parent"
+            android:padding="4dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Credit cards"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/filters_group" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:background="@color/white"
+            android:id="@+id/rv_credit_card_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_credit_cards_title" />
+
+        <TextView
+            android:id="@+id/tv_add_account"
+            android:padding="8dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_background"
+            android:text="Add Account"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_credit_card_details" />
+
+        <TextView
+            android:id="@+id/tv_top_categories_title"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:layout_marginTop="24dp"
+            android:text="Top categories"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_add_account" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_top_categories"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_top_categories_title" />
+
+        <TextView
+            android:id="@+id/tv_see_all_categories"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="See All Categories"
+            android:background="@color/white"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_top_categories" />
+
+        <TextView
+            android:id="@+id/tv_recent_transactions_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:background="@color/white"
+            android:layout_marginTop="24dp"
+            android:text="Recent transactions"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_see_all_categories" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_recent_transactions"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_recent_transactions_title" />
+
+        <TextView
+            android:id="@+id/tv_see_all_transactions"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="8dp"
+            android:layout_marginBottom="56dp"
+            android:text="See All Transactions"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_recent_transactions" />
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
